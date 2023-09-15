@@ -1,3 +1,4 @@
+<!--- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +6,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="javascript.js"></script>
     <title>JavaScript starting</title>
+    <style>
+        input {
+          font-size: 2em;
+          margin: 10px 1px 0;
+        }
+      </style>
 </head>
 <body>
+    <input class="numberInput" type="text">
+    <p></p>
+  
     <script>
-        let a = 10;
+        /*let a = 10;
         console.log("Hello, World!");
         console.log(23+97);
         console.log(23+45+45+56+56+56);
         console.log((4+6+9)/77);
         let max = 57;
         let actual = max-13;
-        percentage = actual/max;
+        percentage = actual/max;*/
         
     </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
+<body>
+
+  <input class="numberInput" type="text">
+  <p></p>
+
+  <script>
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
+
+    function squareRoot(num) {
+    return Math.floor(Math.cbrt(num));
+    }
+
+    function cubed(num) {
+    return num * num * num;
+    }
+
+    function factorial(num) {
+    if (num < 0) return undefined;
+    if (num === 0) return 1;
+    let x = num - 1;
+    while (x > 1) {
+        num *= x;
+        x--;
+    }
+    return num;
+    }
+    input.addEventListener("change", () => {
+    const num = parseFloat(input.value);
+    if (isNaN(num)) {
+        para.textContent = "You need to enter a number!";
+    } else {
+        para.textContent = `${num} square root is ${squareRoot(num)}. `;
+        para.textContent += `${num} cubed is ${cubed(num)}. `;
+        para.textContent += `${num} factorial is ${factorial(num)}. `;
+    }
+    });
+  </script>
+</body>
+</html>
+
+--->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript functions</title>
+</head>
+<body>
+  <h1>Functions in JavaScript</h1>
+  <script>
+    function calcSum77(sumValue) {
+      return sumValue + 7;
+    }
+    console.log(calcSum77(500000));
+
+    function calcMultiply(mulValue1, mulValue2){
+      return (mulValue1 )* (mulValue2);
+    }
+    console.log(calcMultiply(7,8));
+
+    let capitalize = (inputString) => {
+      upperString = inputString.toLowerCase();
+      capitalString = upperString.charAt(0).toUpperCase() + upperString.slice(1)
+      return capitalString;
+    }
+    console.log(capitalize("JHSDUDJFHDFHH"));
+    console.log(capitalize("udsifhdfhuifuih"));
+    console.log(capitalize("jfdiEDFHifjfj"));
+
+    let lastLetter = (givenString) => {
+      let letterString = givenString[givenString.length -4];
+      return letterString;
+    }
+    console.log(lastLetter("abcdefgpqrstu"));
+  </script>
 </body>
 </html>

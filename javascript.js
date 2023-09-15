@@ -75,5 +75,67 @@ console.log(concati);
 let splitting = text.split(",")
 console.log(splitting);
 
-*/
+// if, else if ,else statements
 
+let ifCondition = 65;
+
+if (ifCondition>= 100) {
+    console.log("It's very big!");
+} else if (ifCondition <= 6) {
+    console.log("You have to choose another number!");
+} else {
+    console.log("It's very small!");
+}
+
+
+// --->Checking the credentials of the users.
+
+let user = prompt("Who's there?")
+
+if (user === "Admin"){
+  let pass = prompt("Enter the password!")
+
+    if (pass === "TheMaster"){
+        alert("Welcome Master!")
+    } else if (pass === null || pass ==="") {
+        alert("Canceled")
+    } else {
+        alert("Wrong password!")
+    }
+} else {
+    alert("Unauthorized User")
+}
+
+
+function squared(num) {
+    return num * num;
+  }
+  
+  function cubed(num) {
+    return num * num * num;
+  }
+  
+  function factorial(num) {
+    if (num < 0) return undefined;
+    if (num === 0) return 1;
+    let x = num - 1;
+    while (x > 1) {
+      num *= x;
+      x--;
+    }
+    return num;
+  }
+  input.addEventListener("change", () => {
+    const num = parseFloat(input.value);
+    if (isNaN(num)) {
+      para.textContent = "You need to enter a number!";
+    } else {
+      para.textContent = `${num} squared is ${squared(num)}. `;
+      para.textContent += `${num} cubed is ${cubed(num)}. `;
+      para.textContent += `${num} factorial is ${factorial(num)}. `;
+    }
+  });
+  */
+
+const arrayExample = ["String", 45, true, "Another string"];
+console.log(arrayExample[2]);
