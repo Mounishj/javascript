@@ -135,7 +135,57 @@ function squared(num) {
       para.textContent += `${num} factorial is ${factorial(num)}. `;
     }
   });
-  */
 
-const arrayExample = ["String", 45, true, "Another string"];
-console.log(arrayExample[2]);
+ // ARRAYS 
+const arrayExample = ["String ", 45 , true, " Another string "];
+console.log(arrayExample);
+arrayExample[4] = " Adding ";
+console.log(arrayExample.length);
+  // console.log(arrayExample.sort());
+  
+  let lastLetter = arrayExample[arrayExample.length -1];
+  console.log(lastLetter);
+console.log(Array.isArray(lastLetter));
+const dateNow = new Date();
+console.log(dateNow);
+
+// userName = prompt("What is your name ?")
+
+const convertToString = ["Hi! ","my name ","is ", "Mounish"];
+console.log(convertToString.toString());
+
+console.log(convertToString.join(""));
+
+convertToString.pop();
+console.log(convertToString);
+
+arrayExample[3] = " Replacing string ";
+console.log(arrayExample);
+
+const concatArrays = arrayExample.concat(convertToString);
+console.log(concatArrays);
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(1, 0, "Lemon", "Kiwi");
+// splice() can be used to remove any element in the array
+
+console.log(fruits);
+
+const sliceMethod = ["Pen", "Eraser", "Battery" , "Mouse", "Pineapple"]
+let sliceFruit = sliceMethod.slice(0,4);
+console.log(sliceFruit);
+
+const descendingOrder = [2,5,8,9,6,4,7,45,63,58];
+descendingOrder.sort((a,b) => {
+  return b-a
+})
+console.log(descendingOrder);
+
+const ascendingOrder = [8,7,25,96,45,1,20,36,58]
+console.log(ascendingOrder.sort());
+
+const nesteedArrays = [8,7,25,[96,45,1],20,36,58];
+console.log(nesteedArrays[3][1]);
+*/
+
+
